@@ -1,0 +1,3 @@
+in_channels: 3
+learning_rate: 0.001
+num_classes: 7
