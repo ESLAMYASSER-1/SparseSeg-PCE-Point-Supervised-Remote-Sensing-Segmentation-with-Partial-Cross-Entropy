@@ -5,3 +5,6 @@ Pillow>=10.0
 matplotlib>=3.8
 pandas>=2.0
 tqdm>=4.66
+segmentation-models-pytorch 
+lightning 
+torchmetrics

@@ -5,7 +5,7 @@
     1- Implement Partial Cross Entropy Loss ✅
 
     2- Find any Remote Sensing Segmentation data
-        - sample the simulated point label 
+        - sample the simulated point label  ✅
         - add the loss to remote sensing segmentation network
 
     3- Design Experiments 
