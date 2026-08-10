@@ -167,7 +167,7 @@ The complete experimental pipeline is:
 12. Repeat each density using seeds 42, 43 and 44.
 13. Evaluate the model using the complete dense validation masks.
 14. Calculate mIoU, pixel accuracy, macro precision, macro recall and macro F1.
-15. Store the metrics for each experiment in `history.json`.
+15. Store the metrics for each experiment.
 16. Calculate the mean and standard deviation across the three random seeds.
 
 The validation masks remain dense because the purpose of evaluation is to determine how well a model trained from sparse point supervision can recover the complete semantic segmentation.
@@ -177,7 +177,6 @@ The validation masks remain dense because the purpose of evaluation is to determ
 ## 6. Results
 
 The following table should be populated using the generated `history.json` files.
-
 
 ## 7. Interpretation
 
@@ -202,6 +201,8 @@ Macro F1 provides an additional class-balanced measure by giving equal importanc
 ## 8. Limitations
 
 Several limitations should be considered when interpreting the results.
+![alt text](image.png)
+
 
 ### 8.1 Simulated Point Annotations
 
@@ -268,6 +269,6 @@ The pipeline consists of:
 8. Three independent random seeds for measuring robustness.
 9. Evaluation using mIoU, pixel accuracy, macro precision, macro recall and macro F1.
 
-The final conclusions should be written only after the measured results from the `history.json` files have been inserted.
+The final conclusions should be written only after the measured results.
 
 In particular, the final report should avoid assuming that higher point density improves performance. Any improvement, degradation, saturation, or instability should be reported according to the actual experimental measurements.
