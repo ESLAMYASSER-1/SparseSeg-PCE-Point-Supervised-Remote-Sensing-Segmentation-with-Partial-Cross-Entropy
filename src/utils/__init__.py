@@ -1,3 +1,4 @@
-from PCELoss import PCELoss
-from MakePointLabels import make_point_labels
-from Metrics import segmentation_metrics
+from .PCELoss import PCELoss
+from .MakePointLabels import make_point_labels
+from .Metrics import segmentation_metrics
+from .FolderChecker import check_folders

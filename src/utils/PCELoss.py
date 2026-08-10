@@ -13,6 +13,8 @@ class PCELoss(nn.Module):
         self.ignore_index = ignore_index
         if class_weights is not None:
             self.class_weights = torch.as_tensor(class_weights, dtype=torch.float32)
+        else:
+            self.class_weights = None
 
     def forward(self, logits, point_labels):
         if logits.ndim != 4 or point_labels.ndim != 3:

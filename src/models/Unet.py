@@ -8,7 +8,7 @@ class UNetLightning(L.LightningModule):
     def __init__(
         self,
         in_channels=3,
-        num_classes=7,
+        num_classes=9,
         learning_rate=1e-3
     ):
         super().__init__()
