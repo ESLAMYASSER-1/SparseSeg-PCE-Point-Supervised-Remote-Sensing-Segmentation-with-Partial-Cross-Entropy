@@ -8,7 +8,7 @@ def confusion_matrix(y_true, y_pred, num_classes):
     np.add.at(cm, (y_true[valid], y_pred[valid]), 1)
     return cm
 
-def segmentation_metrics(y_true, y_pred, num_classes):
+def segmentation_metrics(y_true, y_pred, num_classes, phase):
     cm = confusion_matrix(y_true, y_pred, num_classes)
     tp = np.diag(cm).astype(float)
     fp = cm.sum(0) - tp
@@ -20,10 +20,10 @@ def segmentation_metrics(y_true, y_pred, num_classes):
     f1 = 2 * precision * recall / np.maximum(precision + recall, 1e-12)
 
     return {
-        "mIoU": float(np.mean(iou)),
-        "pixel_accuracy": float(tp.sum() / max(cm.sum(), 1)),
-        "macro_precision": float(np.mean(precision)),
-        "macro_recall": float(np.mean(recall)),
-        "macro_f1": float(np.mean(f1)),
-        "per_class_iou": iou.tolist(),
+        f"{phase}_mIoU": float(np.mean(iou)),
+        f"{phase}_pixel_accuracy": float(tp.sum() / max(cm.sum(), 1)),
+        f"{phase}_macro_precision": float(np.mean(precision)),
+        f"{phase}_macro_recall": float(np.mean(recall)),
+        f"{phase}_macro_f1": float(np.mean(f1)),
+        f"{phase}_per_class_iou": iou.tolist(),
     }
