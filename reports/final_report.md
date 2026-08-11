@@ -176,7 +176,8 @@ The validation masks remain dense because the purpose of evaluation is to determ
 
 ## 6. Results
 
-The following table should be populated using the generated `history.json` files.
+The following table should be populated using the generated `res_<n>.csv` files.
+![alt text](image-1.png)
 
 ## 7. Interpretation
 
