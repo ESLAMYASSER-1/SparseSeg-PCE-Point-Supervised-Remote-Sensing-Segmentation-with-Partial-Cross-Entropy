@@ -65,4 +65,4 @@ python src/main.py --point-density 0.05 --seed 42
 
 ## Status
 
-🚧 **Active / in progress.** The data pipeline, Partial Cross-Entropy loss, U-Net training loop, and Lightning metric logging are implemented. The full 12-run sweep and final analysis (results table + figures above) are in progress — check the [commit history](../../commits/main) for the latest state.
+🚧 **Active / in progress.** The data pipeline, Partial Cross-Entropy loss, U-Net training loop, and Lightning metric logging are implemented. The full 12-run sweep and final analysis (results table + figures above) are in progress — check the [commit history] for the latest state.
